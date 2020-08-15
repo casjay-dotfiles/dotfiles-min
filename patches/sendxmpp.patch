@@ -1,0 +1,4 @@
+154c154                                                                                                                                                           
+<     delete($args{file}) if (lc($args{file}) eq "stdout");                                                   
+---                                                                                                           
+>     delete($args{file}) if ($args{file} && (lc($args{file}) eq "stdout"));

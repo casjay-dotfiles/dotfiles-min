@@ -1,0 +1,7 @@
+# Put all .local files here
+bash.local
+zsh.local
+tmux.local
+fish.local
+screen.local
+gitconfig.local

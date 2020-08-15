@@ -1,0 +1,13 @@
+GRUB_TIMEOUT=5
+GRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"
+GRUB_DEFAULT=0
+GRUB_DISABLE_SUBMENU=true
+GRUB_TERMINAL_OUTPUT="console"
+#GRUB_CMDLINE_LINUX="biosdevname=0 net.ifnames=0 quiet consoleblank=0 hpsa.hpsa_simple_mode=1 hpsa.hpsa_allow_any=1"
+GRUB_CMDLINE_LINUX="biosdevname=0 net.ifnames=0 quiet consoleblank=0"
+GRUB_DISABLE_RECOVERY="true"
+GRUB_GFXMODE="1366×768; 1024×768; 1920*1080; 800*600; auto;"
+GRUB_COLOR_NORMAL="light-blue/black"
+GRUB_COLOR_HIGHLIGHT="light-cyan/blue"
+GRUB_DISABLE_LINUX_UUID=true
+GRUB_INIT_TUNE="480 440 1"

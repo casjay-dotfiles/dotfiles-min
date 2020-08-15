@@ -1,0 +1,5 @@
+#Lets have fortune and cowsay create an motd file every hour
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+15 * * * * root cat /etc/casjaysdev/messages/legal.txt > /etc/issue
+15 * * * * root fortune | cowsay > /etc/motd.net && printf "\n\n" >> /etc/motd.net
+16 * * * * root cat /etc/casjaysdev/messages/legal.txt /etc/motd.net > /etc/issue.net
