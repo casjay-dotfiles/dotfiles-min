@@ -461,6 +461,8 @@ if (sudo -vn && sudo -ln) 2>&1 | grep -v 'may not' >/dev/null; then
    if [ -d "$DOTTEMP/etc" ]; then sudo cp -Rfa "$DOTTEMP/etc/." /etc/; fi
    if [ -d "$DOTTEMP/usr" ]; then sudo cp -Rfa "$DOTTEMP/usr/." /usr/; fi
    if [ -d "$DOTTEMP/var" ]; then sudo cp -Rfa "$DOTTEMP/var/." /var/; fi
+   if [ -f "$DOTTEMP/version.txt" ]; then cp -Rf "$DOTTEMP/version.txt" /etc/casjaysdev/updates/versions/configs.txt; fi
+
 
 fi
 
