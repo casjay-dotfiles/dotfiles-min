@@ -457,7 +457,7 @@ if (sudo -vn && sudo -ln) 2>&1 | grep -v 'may not' >/dev/null; then
    ##################################################################################################
    printf "\n\t\t ${BLUE} *** The installer is installing system wide *** ${NC} \n "
    ##################################################################################################
-
+   mkdir -p /etc/casjaysdev/updates/versions >/dev/null 2>&1
    if [ -d "$DOTTEMP/etc" ]; then sudo cp -Rfa "$DOTTEMP/etc/." /etc/; fi
    if [ -d "$DOTTEMP/usr" ]; then sudo cp -Rfa "$DOTTEMP/usr/." /usr/; fi
    if [ -d "$DOTTEMP/var" ]; then sudo cp -Rfa "$DOTTEMP/var/." /var/; fi
