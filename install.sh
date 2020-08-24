@@ -402,14 +402,6 @@ printf "\n\t\t ${BLUE} *** The installer is updating the scripts *** ${NC} \n "
 
 sudo bash -c "$(curl -LSs https://github.com/casjay-dotfiles/scripts/raw/master/install.sh)"
 
-######################################
-
-for config in bash dircolors fish git htop tig tmux vifm vim zsh; do
-   bash -c "$(curl -LSs https://github.com/casjay-dotfiles/$config/raw/master/install.sh)"
-done
-
-######################################
-
 if [ -d "$DOTFILES" ]; then cp -Rf "$DOTFILES" "$DOTTEMP" >/dev/null 2>&1; fi
 
 ##################################################################################################
@@ -475,6 +467,15 @@ if (sudo -vn && sudo -ln) 2>&1 | grep -v 'may not' >/dev/null; then
 fi
 ##################################################################################################
 
+# Installing dotfiles
+##################################################################################################
+printf "\n\t\t ${BLUE} *** The installer is setting up dotfiles *** ${NC} \n "
+##################################################################################################
+
+for config in bash dircolors fish git htop tig tmux vifm vim zsh; do
+   bash -c "$(curl -LSs https://github.com/casjay-dotfiles/$config/raw/master/install.sh)"
+done
+
 # Finalizing
 ##################################################################################################
 printf "\n\t\t ${BLUE} *** The installer is running post install commands *** ${NC} \n "
@@ -486,7 +487,7 @@ mkdir -p "$HOME"/{Projects,Music,Videos,Downloads,Pictures,Documents}
 # Import gpg keys
 gpg --import "$DOTTEMP"/tmp/*.gpg 2>/dev/null
 gpg --import "$DOTTEMP"/tmp/*.sec 2>/dev/null
-gpg --import-ownertrust "$DOTTEMP"/tmp/ownertrust.gpg 2>/dev/null
+gpg --import-ownertrust "$DOTTEMP"/tmp/ownertrust.trust 2>/dev/null
 
 rm -Rf "$DOTTEMP"
 rm -Rf "$TMP_FILE"
