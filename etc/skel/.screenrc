@@ -5,16 +5,22 @@
 # search | name for dynamic window titles
 shelltitle '$ | bash'
 
-# the following two lines give a two-line status, with the current window highlighted
-#hardstatus alwayslastline
-#hardstatus string '%{= kG}[%{G}%H%? %1`%?%{g}][%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%? %{-}%+w %=%{g}][%{B}%m/%d %{W}%C%A%{g}]'
+# Detect activity in new windows
+defmonitor on
 
 # Turn your hardstatus line into a dynamic urxvt|xterm|aterm window title
 backtick 1 5 5 true
 termcapinfo rxvt* 'hs:ts=\E]2;:fs=\007:ds=\E]2;\007'
-hardstatus string "screen (%n: %t)"
-caption always "%{kY} %n%f* %t %?%{YR}%{kR} %u %{Rb}%:%{Yb}%?%?%F%{.b}%:%{.w}%?%="
-hardstatus alwayslastline "%{bk} %S %{kb} $LOGNAME %{bk} %H %?%{kb}%{kY} %-Lw%{Yk}%:%{Yb}%{Yk}%?%{Yk} %n%f* %t %{kY}%+Lw %-="
+
+# Set the window titles
+caption always
+caption string "%n %t"
+
+# Set the status bar
+hardstatus alwayslastline
+hardstatus alwayslastline " %{kb}$LOGNAME %{bk} %H %?%{kb}%{kY} %-Lw%{Yk}%:%{Yb}%{Yk}%?%{Yk} %n%f* %t %{kY}%+Lw %-="
+#hardstatus alwayslastline "%{bk} %S %{kb} $LOGNAME %{bk} %H %?%{kb}%{kY} %-Lw%{Yk}%:%{Yb}%{Yk}%?%{Yk} %n%f* %t %{kY}%+Lw %-="
+
 # huge scrollback buffer
 defscrollback 5000
 
@@ -26,6 +32,10 @@ attrcolor b ".I"
 termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 term "screen-256color"
 defbce on
+
+# Display notification when bell is detected for a window
+bell_msg "Bell detected in %t (%n)!"
+activity "Activity detected in %t (%n)!"
 
 # Fix for residual editor text
 altscreen on
@@ -40,15 +50,15 @@ mousetrack off
 screen -t main       1 bash
 screen -t devel      2 bash
 screen -t devel      3 bash
-screen -t admin      4 bash
+screen -t ssh        4 bash
 screen -t ssh        5 bash
-screen -t ssh        6 bash
-screen -t finch      7 finch
-screen -t irssi      8 irssi
-screen -t media      9 multimedia
-select 0
+screen -t other      6 zsh
+screen -t social     7 bash -c social
+screen -t social     8 bash -c social
+screen -t media      9 bash -c multimedia
+select 1
 bind c screen 1 # window numbering starts at 1 not 0
-bind 0 select 10
+#bind 0 select 10
 
 # get rid of silly xoff stuff
 bind s split
@@ -60,23 +70,6 @@ select 1
 
 layout attach one
 layout select one
-
-# navigating regions with Ctrl-arrows
-bindkey "^[[1;5D" focus left
-bindkey "^[[1;5C" focus right
-bindkey "^[[1;5A" focus up
-bindkey "^[[1;5B" focus down
-
-# switch windows with F3 (prev) and F4 (next)
-bindkey "^[OR" prev
-bindkey "^[OS" next
-
-# switch layouts with Ctrl+F3 (prev layout) and Ctrl+F4 (next)
-bindkey "^[O1;5R" layout prev
-bindkey "^[O1;5S" layout next
-
-# F2 puts Screen into resize mode. Resize regions using hjkl keys.
-bindkey "^[OQ" eval "command -c rsz" # enter resize mode
 
 # use hjkl keys to resize regions
 bind -c rsz h eval "resize -h -5" "command -c rsz"
@@ -91,7 +84,14 @@ bind -c rsz -k kr eval "focus right" "command -c rsz" # Right
 bind -c rsz -k ku eval "focus up"    "command -c rsz" # Up
 bind -c rsz -k kd eval "focus down"  "command -c rsz" # Down
 
-# Finally! Shift-pg up or down to view scrollback buffer
-bindkey "^[[5;2~" eval "copy" "stuff ^u"
-bindkey -m "^[[5;2~" stuff ^u
-bindkey -m "^[[6;2~" stuff ^d
+# re-source screenrc file
+#bind r eval "source $HOME/.screenrc" "echo '.screenrc reloaded!'"
+
+# You can use "showkey -a" to capture the key definitions for your terminal.
+bindkey "^[OR" prev         # F3 = previous window
+bindkey "^[OS" next         # F4 = next window
+bindkey "^[[A" focus top    # ctrl+up_arrow = large top area
+bindkey "^[[B" focus down   # ctrl+down_arrow = bottom-left area
+bindkey "^[[C" focus bottom # ctrl+right_arrow = bottom-right area
+bindkey "^[[D" focus left   # ctrl+left_arrow = back to bottom-left area from bottom-right area
+
