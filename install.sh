@@ -43,7 +43,7 @@ __env() {
    # either http https or git
    GITPROTO="https://"
    #Your git repo
-   GITREPO="${DOTFILESREPO:-github.com/casjay-dotfiles/minimal}"
+   GITREPO="github.com/casjay-dotfiles/minimal"
    #scripts repo
    SCRIPTSREPO="https://github.com/casjay-dotfiles/scripts"
    # Git Command - Private Repo
@@ -120,7 +120,7 @@ __requiredpkgs() {
    TF="$(command -v thefuck 2>/dev/null)"
    SCREEN="$(command -v screen 2>/dev/null)"
    SVN="$(command -v svn 2>/dev/null)"
-   CMUS="$(command -v cmus 2>/dev/null)"
+#   CMUS="$(command -v cmus 2>/dev/null)"
    PYPIP="$(command -v $PIP 2>/dev/null)"
    SENDXMPP="$(command -v sendxmpp 2>/dev/null)"
    XTERM="$(command -v xterm 2>/dev/null)"
@@ -159,7 +159,7 @@ __missingpkg() {
    if [[ ! "$TF" ]]; then MISSING+="thefuck "; fi
    if [[ ! "$SCREEN" ]]; then MISSING+="screen "; fi
    if [[ ! "$SVN" ]]; then MISSING+="subversion "; fi
-   if [[ ! "$CMUS" ]]; then MISSING+="cmus "; fi
+#   if [[ ! "$CMUS" ]]; then MISSING+="cmus "; fi
    if [[ ! "$PYPIP" ]]; then MISSING+="$PYTHONVER-pip "; fi
    if [[ ! "$SENDXMPP" ]]; then MISSING+="sendxmpp "; fi
    if [[ ! "$XTERM" ]]; then MISSING+="xterm "; fi
