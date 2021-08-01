@@ -17,7 +17,7 @@ HOME="${USER_HOME:-${HOME}}"
 
 # Set functions
 
-SCRIPTSFUNCTURL="${SCRIPTSAPPFUNCTURL:-https://github.com/casjay-dotfiles/scripts/raw/master/functions}"
+SCRIPTSFUNCTURL="${SCRIPTSAPPFUNCTURL:-https://github.com/casjay-dotfiles/scripts/raw/main/functions}"
 SCRIPTSFUNCTDIR="${SCRIPTSAPPFUNCTDIR:-/usr/local/share/CasjaysDev/scripts}"
 SCRIPTSFUNCTFILE="${SCRIPTSAPPFUNCTFILE:-system-installer.bash}"
 
@@ -400,7 +400,7 @@ printf "\n\t\t ${BLUE} *** The installer is updating the scripts *** ${NC} \n "
 ##################################################################################################
 # Update remote
 
-sudo bash -c "$(curl -LSs https://github.com/casjay-dotfiles/scripts/raw/master/install.sh)"
+sudo bash -c "$(curl -LSs https://github.com/casjay-dotfiles/scripts/raw/main/install.sh)"
 
 if [ -d "$DOTFILES" ]; then cp -Rf "$DOTFILES" "$DOTTEMP" >/dev/null 2>&1; fi
 
@@ -473,7 +473,7 @@ printf "\n\t\t ${BLUE} *** The installer is setting up dotfiles *** ${NC} \n "
 ##################################################################################################
 
 for config in bash dircolors fish git htop tig tmux vifm vim zsh; do
-   bash -c "$(curl -LSs https://github.com/casjay-dotfiles/$config/raw/master/install.sh)"
+   bash -c "$(curl -LSs https://github.com/casjay-dotfiles/$config/raw/main/install.sh)"
 done
 
 # Finalizing
