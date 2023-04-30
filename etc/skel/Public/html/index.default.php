@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="https://static.casjay.net/default-css/casjaysdev.css">
+<link rel="stylesheet" type="text/css" href="https://casjaysdev-sites.github.io/static/default-css/casjaysdev.css">
 <meta name="generator" content="CasjaysDev">
 <title>Site Configured</title>
 </head>
@@ -26,7 +26,7 @@ Server Admin you can now upload your site to  <br>
 
 <center>
 <!-- Begin Casjays Developments Footer -->
-<?php include "https://static.casjay.net/casjays-footer.php"; ?>
+<?php include "https://casjaysdev-sites.github.io/static/casjays-footer.php"; ?>
 </center>
 <!-- End Casjays Developments Footer -->
 </body>
