@@ -364,7 +364,7 @@ sub return_html {
             print "<td colspan=3 align=center bgcolor=#D0D0D0><font face=arial><a href=\"$Config{'return_link_url'}\">$Config{'return_link_title'}</a></td></tr>\n";
 
 }
-            print "<td colspan=3 align=center bgcolor=#C0C0C0><font face=arial size=-2><a href=\"http://casjaysdev.com/\">CasjaysDev</a></td></tr>\n";
+            print "<td colspan=3 align=center bgcolor=#C0C0C0><font face=arial size=-2><a href=\"http://casjaysdev.pro/\">CasjaysDev</a></td></tr>\n";
  print "</table></td></tr></table>\n";
  print "<br clear=all></center>\n";
 
@@ -966,7 +966,7 @@ Content-type: text/html
                 <tr>
                 <td width=150>
                </td><td bgcolor=#FFFFFF><font face=arial> <BR>                                
-                    The form attempting to use <br><a href="http://casjaysdev.com">CasjaysDev.com FormMail</a>
+                    The form attempting to use <br><a href="http://casjaysdev.pro">CasjaysDev.com FormMail</a>
                      resides at <tt>$ENV{'HTTP_REFERER'}</tt>, which is not allowed to access
                      this cgi script.<p> If you are attempting to configure CasjaysDev.com FormMail to run with this form, you need
                       to add the following to \@referers, explained in detail in the README file.<p>
@@ -975,7 +975,7 @@ Content-type: text/html
                 <td width=150>
                 </td></tr><tr><td colspan=3><br></td></tr>
                 <tr><td colspan=3 align=center bgcolor=#C0C0C0>
-                <font face=arial size=-2><a href="javascript: history.go(-1)">Go Back</a><br><a href="http://casjaysdev.com">CasjaysDev.com</a>
+                <font face=arial size=-2><a href="javascript: history.go(-1)">Go Back</a><br><a href="http://casjaysdev.pro">CasjaysDev.com</a>
                 </td>
                 </tr>
           </table>
@@ -1014,7 +1014,7 @@ Content-type: text/html
                 <td width=150>
                 </td></tr><tr><td colspan=3><br></td></tr>
                 <tr><td colspan=3 align=center bgcolor=#C0C0C0>
-                <font face=arial size=-2><a href="javascript: history.go(-1)">Go Back</a><br><a href="http://casjaysdev.com">CasjaysDev.com</a>
+                <font face=arial size=-2><a href="javascript: history.go(-1)">Go Back</a><br><a href="http://casjaysdev.pro">CasjaysDev.com</a>
                 </td>
                 </tr>
           </table>
@@ -1055,7 +1055,7 @@ Content-type: text/html
                 <td width=150>
                 </td></tr><tr><td colspan=3><br></td></tr>
                 <tr><td colspan=3 align=center bgcolor=#C0C0C0>
-                <font face=arial size=-2><a href="javascript: history.go(-1)">Go Back</a><br><a href="http://casjaysdev.com">CasjaysDev.com</a>
+                <font face=arial size=-2><a href="javascript: history.go(-1)">Go Back</a><br><a href="http://casjaysdev.pro">CasjaysDev.com</a>
                 </td>
                 </tr>
           </table>
@@ -1095,7 +1095,7 @@ Content-type: text/html
                 <td width=150>
                 </td></tr><tr><td colspan=3><br></td></tr>
                 <tr><td colspan=3 align=center bgcolor=#C0C0C0>
-                <font face=arial size=-2><a href="javascript: history.go(-1)">Go Back</a><br><a href="http://casjaysdev.com">CasjaysDev.com</a>
+                <font face=arial size=-2><a href="javascript: history.go(-1)">Go Back</a><br><a href="http://casjaysdev.pro">CasjaysDev.com</a>
                 </td>
                 </tr>
           </table>
@@ -1147,7 +1147,7 @@ $missing_field_list
                 <td width=150>
                 </td></tr><tr><td colspan=3><br></td></tr>
                 <tr><td colspan=3 align=center bgcolor=#C0C0C0>
-                <font face=arial size=-2><a href="javascript: history.go(-1)">Go Back</a><br><a href="http://casjaysdev.com">CasjaysDev.com</a>
+                <font face=arial size=-2><a href="javascript: history.go(-1)">Go Back</a><br><a href="http://casjaysdev.pro">CasjaysDev.com</a>
                 </td>
                 </tr>
           </table>

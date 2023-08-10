@@ -6,7 +6,7 @@ HOME="${USER_HOME:-${HOME}}"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # @Author          : Jason
-# @Contact         : casjaysdev@casjay.net
+# @Contact         : casjaysdev@casjay.pro
 # @File            : install
 # @Created         : Wed, Aug 09, 2020, 02:00 EST
 # @License         : WTFPL
@@ -51,7 +51,7 @@ __env() {
    #Public Repo
    GITURL="$GITPROTO$GITREPO"
    # Default NTP Server
-   NTPSERVER="ntp.casjay.net"
+   NTPSERVER="ntp.casjay.pro"
    # Default dotfiles dir
    # Set primary dir
    DOTFILES="$HOME/.local/dotfiles/minimal"
