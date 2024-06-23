@@ -19,10 +19,13 @@ site owner is working on it!  <br><br><br><br>
 
   <div class="c3">
 Server Admin you can now upload your site to  <br>
-<?php echo $_SERVER['DOCUMENT_ROOT']; ?>  <br><br><br>
-<?php echo "Server Name: ".$_SERVER['SERVER_NAME']."<BR>"; ?>
-<?php echo "IP Address: ".$_SERVER['SERVER_ADDR']."<BR>"; ?>  <br>
-  </div>
+<?php echo $_SERVER['DOCUMENT_ROOT']; ?>
+<br><br><br>
+<?php echo "System Hostname: " , gethostname() . "<br />"; ?>
+<?php echo "Server Name: ".$_SERVER['SERVER_NAME']."<br />"; ?>
+<?php echo "IP Address: ".$_SERVER['SERVER_ADDR']."<br />"; ?>
+<br>
+</div>
 
 <center>
 <!-- Begin Casjays Developments Footer -->
