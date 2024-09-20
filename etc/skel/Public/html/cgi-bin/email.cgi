@@ -966,16 +966,16 @@ Content-type: text/html
                 <tr>
                 <td width=150>
                </td><td bgcolor=#FFFFFF><font face=arial> <BR>                                
-                    The form attempting to use <br><a href="http://casjaysdev.pro">CasjaysDev.com FormMail</a>
+                    The form attempting to use <br><a href="http://casjaysdev.pro">CasjaysDev.pro FormMail</a>
                      resides at <tt>$ENV{'HTTP_REFERER'}</tt>, which is not allowed to access
-                     this cgi script.<p> If you are attempting to configure CasjaysDev.com FormMail to run with this form, you need
+                     this cgi script.<p> If you are attempting to configure CasjaysDev.pro FormMail to run with this form, you need
                       to add the following to \@referers, explained in detail in the README file.<p>
                       Add <tt>'$host'</tt> to your <tt><b>\@referers</b></tt> array.<br>
                 </td>
                 <td width=150>
                 </td></tr><tr><td colspan=3><br></td></tr>
                 <tr><td colspan=3 align=center bgcolor=#C0C0C0>
-                <font face=arial size=-2><a href="javascript: history.go(-1)">Go Back</a><br><a href="http://casjaysdev.pro">CasjaysDev.com</a>
+                <font face=arial size=-2><a href="javascript: history.go(-1)">Go Back</a><br><a href="http://casjaysdev.pro">CasjaysDev.pro</a>
                 </td>
                 </tr>
           </table>
@@ -992,7 +992,7 @@ Content-type: text/html
 
 <html>
  <head>
-  <title>CasjaysDev.com FormMail</title>
+  <title>CasjaysDev.pro FormMail</title>
  </head>
  <body bgcolor=#FFFFFF text=#000000>
   <center>
@@ -1014,7 +1014,7 @@ Content-type: text/html
                 <td width=150>
                 </td></tr><tr><td colspan=3><br></td></tr>
                 <tr><td colspan=3 align=center bgcolor=#C0C0C0>
-                <font face=arial size=-2><a href="javascript: history.go(-1)">Go Back</a><br><a href="http://casjaysdev.pro">CasjaysDev.com</a>
+                <font face=arial size=-2><a href="javascript: history.go(-1)">Go Back</a><br><a href="http://casjaysdev.pro">CasjaysDev.pro</a>
                 </td>
                 </tr>
           </table>
@@ -1055,7 +1055,7 @@ Content-type: text/html
                 <td width=150>
                 </td></tr><tr><td colspan=3><br></td></tr>
                 <tr><td colspan=3 align=center bgcolor=#C0C0C0>
-                <font face=arial size=-2><a href="javascript: history.go(-1)">Go Back</a><br><a href="http://casjaysdev.pro">CasjaysDev.com</a>
+                <font face=arial size=-2><a href="javascript: history.go(-1)">Go Back</a><br><a href="http://casjaysdev.pro">CasjaysDev.pro</a>
                 </td>
                 </tr>
           </table>
@@ -1087,7 +1087,7 @@ Content-type: text/html
               Error: No Recipient</b></td></tr>
                 <tr>
                 <td width=150>
-               </td><td bgcolor=#FFFFFF><font face=arial> <BR> No Recipient was specified in the data sent to CasjaysDev.com FormMail.  Please
+               </td><td bgcolor=#FFFFFF><font face=arial> <BR> No Recipient was specified in the data sent to CasjaysDev.pro FormMail.  Please
      make sure you have filled in the 'recipient' form field with an e-mail
      address.  More information on filling in recipient form fields can be
      found in the README file.<p>
@@ -1095,7 +1095,7 @@ Content-type: text/html
                 <td width=150>
                 </td></tr><tr><td colspan=3><br></td></tr>
                 <tr><td colspan=3 align=center bgcolor=#C0C0C0>
-                <font face=arial size=-2><a href="javascript: history.go(-1)">Go Back</a><br><a href="http://casjaysdev.pro">CasjaysDev.com</a>
+                <font face=arial size=-2><a href="javascript: history.go(-1)">Go Back</a><br><a href="http://casjaysdev.pro">CasjaysDev.pro</a>
                 </td>
                 </tr>
           </table>
@@ -1147,7 +1147,7 @@ $missing_field_list
                 <td width=150>
                 </td></tr><tr><td colspan=3><br></td></tr>
                 <tr><td colspan=3 align=center bgcolor=#C0C0C0>
-                <font face=arial size=-2><a href="javascript: history.go(-1)">Go Back</a><br><a href="http://casjaysdev.pro">CasjaysDev.com</a>
+                <font face=arial size=-2><a href="javascript: history.go(-1)">Go Back</a><br><a href="http://casjaysdev.pro">CasjaysDev.pro</a>
                 </td>
                 </tr>
           </table>
@@ -1161,5 +1161,3 @@ $missing_field_list
     }
     exit;
 }
-
-
